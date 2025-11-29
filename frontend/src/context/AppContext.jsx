@@ -44,9 +44,10 @@ const AppContextProvider = ({ children }) => {
       formData.append("file", selectedImage);
 
       const res = await axios.post(
-        backendUrl + "/api/images/remove-background",
-        formData
-      );
+  `${backendUrl}/api/images/remove-background`,
+  formData
+);
+
 
       const base64 = "data:image/png;base64," + res.data;
       setResultImage(base64);
