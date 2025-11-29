@@ -1,0 +1,83 @@
+/* Force full dark mode everywhere */
+html, body {
+  background: #0c0f13;
+  color-scheme: dark;
+}
+
+/* Set dark theme variables as default */
+:root {
+  --bg-color: #0c0f13;
+  --card-bg: rgba(26, 28, 32, 0.8);
+  --text-color: #e5e7eb;
+  --text-muted: #9ca3af;
+  --brand-primary: #8b5cf6;
+  --shadow: 0 0 35px rgba(140, 82, 255, 0.25);
+}
+
+/* Remove any previous light mode styles */
+html:not(.dark) {
+  background: var(--bg-color) !important;
+}
+
+/* Apply variables */
+body {
+  background: var(--bg-color) !important;
+  color: var(--text-color);
+  transition: all .25s ease;
+}
+
+/* Cards - Strong neon glass effect */
+.custom-card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(25px);
+  border-radius: 18px;
+  transition: .25s;
+}
+.custom-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Buttons */
+.custom-btn {
+  background: var(--brand-primary);
+  transition: .25s;
+}
+.custom-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+/* Text styling */
+.text-main {
+  color: var(--text-color);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Loader */
+.loader {
+  border: 4px solid transparent;
+  border-top-color: var(--brand-primary);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg) } }
+
+/* Animations */
+@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+.animate-fade { animation: fade .8s ease }
+
+@keyframes zoom { from { transform: scale(.97) } to { transform: scale(1) } }
+.animate-zoom { animation: zoom .6s ease-out }
+
+/* Centering helper */
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

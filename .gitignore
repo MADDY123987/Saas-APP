@@ -1,0 +1,53 @@
+# ---------------------
+# FRONTEND
+# ---------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+frontend/npm-debug.log
+frontend/yarn-debug.log
+frontend/yarn-error.log
+
+# Vite
+frontend/.vite
+frontend/.vite-cache/
+
+# Lock files backups
+frontend/package-lock.json
+frontend/pnpm-lock.yaml
+frontend/yarn.lock
+
+# ---------------------
+# BACKEND (SPRING BOOT)
+# ---------------------
+backend/target/
+backend/.DS_Store
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.idea/
+
+# Maven / Gradle
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# Logs
+backend/*.log
+
+# Sensitive backend configs
+backend/src/main/resources/application.properties
+backend/src/main/resources/application.yml
+
+# ---------------------
+# COMMON (root)
+# ---------------------
+*.env
+*.log
+.DS_Store
+.vscode/
+.git/
+
+# Ignore system and editor files
+Thumbs.db
