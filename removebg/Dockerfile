@@ -8,7 +8,7 @@ COPY src ./src
 RUN mvn -B -DskipTests clean package
 
 # Stage 2: Run jar using small jdk runtime
-FROM eclipse-temurin-17-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
